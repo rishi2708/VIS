@@ -1,0 +1,442 @@
+body {
+    background-color: #171a1e;
+    color: #e9e9e9;
+    overflow: hidden;
+}
+
+:-webkit-autofill,
+:-webkit-autofill:hover,
+:-webkit-autofill:focus {
+    background-color: #292e33;
+    -webkit-text-fill-color: #e9e9e9;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(135, 134, 134);
+    border-radius: 10px;
+}
+
+.logo {
+    height: 24px;
+}
+
+#form {
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+}
+
+#form .details-form {
+    padding: 70px 20px;
+}
+
+#form .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px 0;
+    background-color: #292e33;
+    box-shadow: 0 0 20px 0 black;
+    border-radius: 10px;
+}
+
+#form .title {
+    margin: 20px;
+    padding: 0 10px;
+}
+
+#form .field {
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#form .label {
+    margin-left: 10px;
+}
+
+#form .input-details {
+    margin: 5px 10px;
+    padding: 5px 0 3px 0;
+    border: none;
+    outline: none;
+    background-color: #292e33;
+    color: #e9e9e9;
+    border-bottom: 2px solid black;
+}
+
+#form .input-details-radio {
+    margin: 5px 10px;
+    padding: 5px 0 3px 0;
+    border: none;
+    outline: none;
+}
+
+#form .radio:hover {
+    cursor: pointer;
+}
+
+#form .radio-vals {
+    margin-right: 10px;
+}
+
+#form .submit-btn {
+    margin: 20px 40px;
+    padding: 5px;
+    color: #fff;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#form .switch-login-register {
+    font-size: 0.8rem;
+    margin: auto;
+}
+
+#form .switch-login-register a {
+    text-decoration: none;
+}
+
+
+
+
+#loader {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    flex-direction: column;
+    z-index: 999;
+    overflow: hidden;
+}
+
+#loader .body {
+    height: 80px;
+    width: 140px;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    animation: animate 0.5s linear infinite;
+}
+
+#loader .body .sub:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 90px;
+    background: black;
+    top: 10px;
+    right: 35px;
+    /* transform: rotate(40deg); */
+    /* border-radius: 0 0 0 50px;; */
+}
+
+#loader .body .sub:after {
+    position: absolute;
+    content: "";
+    background: white;
+    height: 6px;
+    width: 22%;
+    top: 32%;
+    margin-left: 50px;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+#loader .body:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 60px;
+    background: black;
+    top: -10px;
+    right: -20px;
+    transform: rotate(40deg);
+    border-radius: 0 0 0 50px;
+}
+
+@keyframes animate {
+    100% {
+        transform: translateY(2px);
+    }
+}
+
+#loader .body .wheel {
+    height: 40px;
+    width: 40px;
+    background: white;
+    border: 4px solid black;
+    position: absolute;
+    border-radius: 50px;
+    margin-left: 50px;
+    bottom: -20px;
+    animation: wheels 0.5s linear infinite;
+}
+
+#loader .body .wheel:before {
+    position: absolute;
+    content: "";
+    background: black;
+    height: 5px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#loader .body .wheel:after {
+    position: absolute;
+    content: "";
+    background: black;
+    height: 5px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+@keyframes wheels {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader .body .front {
+    position: absolute;
+    margin: 0 80px;
+}
+
+#loader .body .back {
+    position: absolute;
+    margin: 0 10px;
+}
+
+#loader .cover {
+    position: relative;
+    height: 10px;
+    width: 200px;
+    bottom: -15px;
+    overflow: hidden;
+}
+
+#loader .cover .path {
+    height: 8px;
+    width: 600%;
+    background: white;
+    position: absolute;
+    animation: path 1.3s linear infinite;
+}
+
+#loader .cover .path:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 18px;
+    background: black;
+    left: 20%;
+}
+
+#loader .cover .path:after {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 18px;
+    background: black;
+    right: 60%;
+}
+
+@keyframes path {
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+#loader .text {
+    color: white;
+    position: relative;
+    text-align: center;
+    bottom: -30px;
+    font-weight: 800;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.pt {
+    padding-top: 80px;
+}
+
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+
+
+footer {
+    width: 100%;
+    background: #111;
+}
+
+footer .main-content {
+    display: flex;
+}
+
+footer .main-content .box {
+    flex-basis: 50%;
+    padding: 50px;
+}
+
+footer .box h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+footer .box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+footer .box .content:before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+}
+footer .box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #f12020;
+    top: -10px;
+}
+footer .left .content p{
+    text-align: justify;
+}
+footer .left .content .social{
+    margin: 20px 0 0 0;
+}
+footer .left .content .social a{
+    padding: 0 2px;
+}
+footer .left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+footer .left .content .social a span:hover{
+    background: #f12020;
+}
+footer .center .content .fas{
+    font-size: 1.4375rem;
+    background: #1a1a1a;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+footer .center .content .fas:hover{
+    background: #f12020;
+}
+footer .center .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+footer .center .content .phone{
+    margin: 15px 0;
+}
+footer .right form .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #656565;
+}
+footer .right form .msg{
+    margin-top: 10px;
+}
+footer .right form input, footer .right form textarea{
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+footer .right form input:focus,
+footer .right form textarea:focus{
+    outline-color: #3498db;
+}
+footer .right form input{
+    height: 35px;
+}
+footer .right form .btn{
+    margin-top: 10px;
+    width: 100%;
+}
+footer .right form .btn button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #f12020;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 25px;
+}
+footer .right form .btn button:hover{
+    background: rgb(255, 193, 7);
+}
+footer .bottom center{
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #151515;
+}
+footer .bottom center span{
+    color: #656565;
+}
+footer .bottom center a{
+    color: #f12020;
+    text-decoration: none;
+}
+footer .bottom center a:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    footer .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    footer .main-content .box{
+        margin: 5px 0;
+    }
+}

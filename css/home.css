@@ -1,0 +1,59 @@
+.img-carousel {
+    max-height: 100vh;
+}
+
+.carousel-caption-1 {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    margin-right: 10px;
+    font-size: 4vw;
+    z-index: 10;
+}
+
+.carousel-caption-2 {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    margin-right: 10px;
+    font-size: 4vw;
+    z-index: 10;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    visibility: hidden;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    visibility: visible;
+}
+
+.typewriter p {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange
+    }
+}
